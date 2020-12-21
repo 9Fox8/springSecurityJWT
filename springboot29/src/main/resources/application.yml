@@ -1,0 +1,32 @@
+server:
+  port: 8888
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql:///qixi?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: root
+  redis:
+    host: localhost
+    port: 6379
+    database: 0
+    password: redis
+    timeout: 30000
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+jwt:
+  # 密匙
+  secret: JWTTokenSecret
+  # 名称
+  tokenName: jwt_token
+  # 前缀
+  tokenPrefix: pJrwitx-
+  # 过期时间 : 单位秒
+  expirationTime: 86400
+  # 不需要认证的接口
+  antMatchers: /login/**,/logout,/favicon.ico
+logging:
+  level:
+    root: info
+
