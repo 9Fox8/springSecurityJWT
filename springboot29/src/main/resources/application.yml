@@ -11,8 +11,7 @@ spring:
     host: localhost
     port: 6379
     database: 0
-    password: redis
-    timeout: 30000
+    password:
 mybatis-plus:
   mapper-locations: classpath:mapper/*.xml
 jwt:
@@ -25,7 +24,7 @@ jwt:
   # 过期时间 : 单位秒
   expirationTime: 86400
   # 不需要认证的接口
-  antMatchers: /login/**,/logout,/favicon.ico
+  antMatchers: /login/**,/logout,/favicon.ico,/test
 logging:
   level:
     root: info

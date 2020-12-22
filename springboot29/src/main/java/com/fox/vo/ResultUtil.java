@@ -47,6 +47,10 @@ public class ResultUtil {
         return new ResultUtil(false, msg, 200, data, jsonObject);
     }
 
+    public static ResultUtil error(String msg,Integer status,Object data){
+        return new ResultUtil(false,msg,status,data,null);
+    }
+
     public static ResultUtil sucess(String msg) {
         return new ResultUtil(true, msg, 200, null, null);
     }
